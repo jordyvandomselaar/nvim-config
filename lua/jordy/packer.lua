@@ -33,6 +33,9 @@ return require('packer').startup(function(use)
     use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
 
+    -- Fugitive git
+    use 'tpope/vim-fugitive'
+
     -- " Nvim-tree
     use {
     'nvim-tree/nvim-tree.lua',
