@@ -1,7 +1,7 @@
 local nnoremap = require("jordy.keymap").nnoremap
 
 -- Show file directory via ll
-nnoremap("<leader>ll", "<cmd>Ex<CR>")
+nnoremap("<leader>ll", "<cmd>NvimTreeFocus<CR>")
 
 -- Telescope
 
