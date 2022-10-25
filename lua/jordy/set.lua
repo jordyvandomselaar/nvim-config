@@ -28,3 +28,4 @@ vim.diagnostic.config({
 
 -- Completions
 completeopt=menu,menuone,noselect
+

@@ -32,18 +32,32 @@ return require('packer').startup(function(use)
     -- " Telescope"
     use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use { "nvim-telescope/telescope-file-browser.nvim" }
+
 
     -- Fugitive git
     use 'tpope/vim-fugitive'
 
     -- " Nvim-tree
+    --use {
+    --'nvim-tree/nvim-tree.lua',
+   -- requires = {
+    --    'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    --},
+    --tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    --}
+
+    -- Lualine
     use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-        'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
-    }
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+}
+
+use 'github/copilot.vim'
+use 'airblade/vim-gitgutter'
+use 'mattn/emmet-vim'
+use 'yggdroot/indentline'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
