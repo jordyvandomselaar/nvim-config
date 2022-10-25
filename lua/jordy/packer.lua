@@ -38,6 +38,7 @@ return require('packer').startup(function(use)
 
     -- Fugitive git
     use 'tpope/vim-fugitive'
+    use 'shumphrey/fugitive-gitlab.vim'
 
     -- " Nvim-tree
     --use {
