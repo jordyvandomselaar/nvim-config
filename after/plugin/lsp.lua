@@ -3,7 +3,8 @@ require("mason-lspconfig").setup({
     ensure_installed = {
         "pyright",
         "tsserver",
-        "intelephense"
+        "intelephense",
+        "eslint"
     },
 
     automatic_installation = true,

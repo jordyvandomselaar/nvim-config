@@ -35,3 +35,13 @@ require("telescope").setup {
 -- load_extension, somewhere after setup function:
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('file_browser')
+
+local nnoremap = require("jordy.keymap").nnoremap
+
+-- Telescope
+nnoremap("<leader>ff",require('telescope.builtin').find_files)
+nnoremap("<leader>fg",require('telescope.builtin').live_grep)
+nnoremap("<leader>fb",require('telescope.builtin').buffers)
+nnoremap("<leader>fh",require('telescope.builtin').help_tags)
+nnoremap("<leader>ll",":Telescope file_browser<CR>")
+-- end of Telescope
