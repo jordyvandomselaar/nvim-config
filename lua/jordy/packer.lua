@@ -13,6 +13,7 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
+    use 'nvim-tree/nvim-web-devicons'
     use 'folke/tokyonight.nvim'
 
     -- " LSP"
@@ -40,19 +41,11 @@ return require('packer').startup(function(use)
     use 'tpope/vim-fugitive'
     use 'shumphrey/fugitive-gitlab.vim'
 
-    -- " Nvim-tree
-    --use {
-    --'nvim-tree/nvim-tree.lua',
-   -- requires = {
-    --    'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    --},
-    --tag = 'nightly' -- optional, updated every week. (see issue #1193)
-    --}
 
     -- Lualine
     use {
   'nvim-lualine/lualine.nvim',
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
 
 use 'github/copilot.vim'
@@ -63,7 +56,7 @@ use 'yggdroot/indentline'
 -- trouble
 use {
   "folke/trouble.nvim",
-  requires = "kyazdani42/nvim-web-devicons",
+  requires = "nvim-tree/nvim-web-devicons",
   config = function()
     require("trouble").setup {
       -- your configuration comes here
